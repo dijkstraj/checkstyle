@@ -254,6 +254,12 @@ public class AstRegressionTest extends AbstractTreeTestSupport {
                 getPath("InputAstRegressionManyAlternativesInMultiCatch.java"));
     }
 
+    @Test
+    public void testInputEmojiString() throws Exception {
+        verifyAst(getPath("InputAstRegressionEmojiString.txt"),
+            getPath("InputAstRegressionEmojiString.java"));
+    }
+
     private static void verifyAstRaw(String expectedTextPrintFileName, String actualJava)
             throws Exception {
         verifyAstRaw(expectedTextPrintFileName, actualJava, JavaParser.Options.WITHOUT_COMMENTS);

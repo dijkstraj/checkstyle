@@ -301,3 +301,10 @@ class SpecialCasesInForLoop_NoWhitespaceBeforeDefault
         while (true) {}
     }
 }
+
+class Emoji_NoWhitespaceBeforeDefault {
+    /** Should be ok **/
+    private String mVar1 = "😃🙈";
+    /** Should be ok **/
+    private String mVar2 = "😃 🙈";
+}
