@@ -304,6 +304,12 @@ public class AstRegressionTest extends AbstractTreeTestSupport {
     }
 
     @Test
+    public void testInputEmojiString() throws Exception {
+        verifyAst(getPath("InputAstRegressionEmojiString.txt"),
+            getPath("InputAstRegressionEmojiString.java"));
+    }
+
+    @Test
     public void testImpossibleExceptions() throws Exception {
         AssertGeneratedJavaLexer.verifyFail("mSTD_ESC", 'a');
         AssertGeneratedJavaLexer.verifyFail("mSTD_ESC", '0', (char) 0xFFFF);
